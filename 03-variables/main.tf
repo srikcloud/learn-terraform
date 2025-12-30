@@ -65,3 +65,11 @@ output "b1" {
 output "c1" {
   value = var.c["x"]
 }
+
+## variable from command line
+variable "cli" {
+}
+output "command-line-variable" {
+  value = var.cli
+}
+
