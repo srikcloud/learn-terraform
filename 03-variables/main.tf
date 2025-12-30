@@ -63,5 +63,5 @@ output "b1" {
 }
 
 output "c1" {
-  value = var.c[x]
+  value = var.c["x"]
 }
