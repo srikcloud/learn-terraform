@@ -9,6 +9,6 @@ output "test" {
 resource "null_resource" "testx" {
 }
 
-output "test" {
+output "testx" {
   value = null_resource.testx.id
 }
