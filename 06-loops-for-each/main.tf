@@ -35,7 +35,7 @@ resource "azurerm_virtual_machine" "test" {
   location              = "UK West"
   resource_group_name   = "rg-roboshop"
   network_interface_ids = [azurerm_network_interface.privateip[each.key].id]
-  vm_size               = "Standard_B2als_v2"
+  vm_size               = each.value["vm_size"]
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
