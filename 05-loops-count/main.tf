@@ -43,7 +43,7 @@ resource "azurerm_virtual_machine" "test" {
   name                  = "${var.nodes[count.index]}-vm"
   location              = "UK West"
   resource_group_name   = "rg-roboshop"
-  network_interface_ids = ["/subscriptions/f7fcf972-1a3d-456c-a347-914d12f8c308/resourceGroups/rg-roboshop/providers/Microsoft.Network/networkInterfaces/terraform-testing"]
+  network_interface_ids = [azurerm_network_interface.privateip[count.index].id]
   vm_size               = "Standard_B2als_v2"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
