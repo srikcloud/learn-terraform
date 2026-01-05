@@ -5,12 +5,14 @@ provider "azurerm" {
 
 variable "nodes" {
   default = {
-     test1 = {
+      test2 = {
         vm_size               = "Standard_B2als_v2"
      }
-     test2 = {
+
+      test1 = {
         vm_size               = "Standard_B2als_v2"
      }
+
     }
 }
 
